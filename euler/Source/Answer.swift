@@ -13,8 +13,17 @@ class Answer: CustomStringConvertible{
     init(result:String) {
         self.result = result
     }
+    init(result:Int) {
+        self.result = "\(result)"
+    }
+    
+    class func noAnswer() -> Answer{
+        return Answer.init(result: "No Answer")
+    }
 
     var description: String {
         return result
     }
+    
+    
 }

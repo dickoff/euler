@@ -14,6 +14,8 @@
 		988C2916214DCD44006BD805 /* 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988C2915214DCD44006BD805 /* 2.swift */; };
 		988C2919214DD376006BD805 /* 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988C2918214DD376006BD805 /* 3.swift */; };
 		988C291B214DDA3A006BD805 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988C291A214DDA3A006BD805 /* Utilities.swift */; };
+		988C291D214DDFA6006BD805 /* 4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988C291C214DDFA6006BD805 /* 4.swift */; };
+		988C291F214DEA97006BD805 /* 5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988C291E214DEA97006BD805 /* 5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +39,8 @@
 		988C2915214DCD44006BD805 /* 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.swift; sourceTree = "<group>"; };
 		988C2918214DD376006BD805 /* 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.swift; sourceTree = "<group>"; };
 		988C291A214DDA3A006BD805 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		988C291C214DDFA6006BD805 /* 4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.swift; sourceTree = "<group>"; };
+		988C291E214DEA97006BD805 /* 5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				988C2918214DD376006BD805 /* 3.swift */,
+				988C291C214DDFA6006BD805 /* 4.swift */,
+				988C291E214DEA97006BD805 /* 5.swift */,
 				988C2915214DCD44006BD805 /* 2.swift */,
 				988C2913214DCB50006BD805 /* 1.swift */,
 			);
@@ -151,6 +157,8 @@
 				988C2914214DCB50006BD805 /* 1.swift in Sources */,
 				988C2919214DD376006BD805 /* 3.swift in Sources */,
 				988C2912214DC9BD006BD805 /* Answer.swift in Sources */,
+				988C291F214DEA97006BD805 /* 5.swift in Sources */,
+				988C291D214DDFA6006BD805 /* 4.swift in Sources */,
 				988C2910214DC8CE006BD805 /* Problem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

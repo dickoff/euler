@@ -18,3 +18,9 @@ print(p2.solve())
 
 let p3 = Problem3.init()
 print(p3.solve())
+
+let p4 = Problem4.init()
+print(p4.solve())
+
+let p5 = Problem5.init()
+print(p5.solve())

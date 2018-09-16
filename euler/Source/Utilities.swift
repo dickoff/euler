@@ -26,4 +26,9 @@ extension Int {
         return true
     }
     
+    nonmutating func isPalindromic() -> Bool {
+        let stringRepresentation = self.description
+        return stringRepresentation.elementsEqual(stringRepresentation.reversed())
+    }
+    
 }
