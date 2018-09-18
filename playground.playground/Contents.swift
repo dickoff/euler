@@ -1,9 +1,9 @@
 import Cocoa
 
-var str = "Hello, playground"
 
-let x = 600851475143
+var a: [String]?
 
-let y = x.quotientAndRemainder(dividingBy: 1000)
-print(y)
+a?.append("a thing")
+
+
 
