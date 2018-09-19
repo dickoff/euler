@@ -27,46 +27,41 @@ We can see that 28 is the first triangle number to have over five divisors.
 
 What is the value of the first triangle number to have over five hundred divisors?
 """
-
-    func numDivisors(x: Int) -> Int {
-        let divisors = (1...x).filter  { x % $0 == 0 };
-        return divisors.count;
-    }
-
-    func triangle(n: Int) -> Int{
-        return (n * (n + 1)) / 2;
-    }
-
-    func solve() -> Answer {
-        var n = 1,
-            t = 1,
-            limit = 500,
-            leftDivisors = 1,
-            rightDivisors = 1;
-
-        while (true) {
-            n += 1;
-            t = triangle(n: n);
-            // n and n+1 are coprime and thus share no divisors.
-
-            // Take the even number in { n, n + 1 }
-            // Assuming n is even:
-            //      numDivisors((n/2) * (n+1)) = numDivisors(n/2) * numDivisors(n+1)
-            if n % 2 == 0 {
-                rightDivisors = numDivisors(x : n + 1);
+    
+    func calculateFactorsOf(x: Int, referenceDict:[Int:Set<Int>]) -> Set<Int>{
+        var factors: Set<Int> = Set<Int>()
+        for candidate in (1...x).reversed() {
+            if !factors.contains(candidate) {
+                if x % candidate == 0 {
+                    guard let precalculatedFactors = referenceDict[candidate] else {
+                        factors.insert(candidate)
+                        continue
+                    }
+                    factors.formUnion(precalculatedFactors)
+                }
             }
-            else {
-                rightDivisors = numDivisors(x : (n + 1) / 2);
-            }
-
-            if (leftDivisors * rightDivisors) > limit {
-                break;
-            }
-            else {
-                leftDivisors = rightDivisors;
-            }
+            
         }
-        return Answer.init(result: t);
+        return factors
+    }
+    func solve() -> Answer {
+        var factorMap = [Int:Set<Int>]()
+        factorMap[1] = [1]
+        
+        var i = 2
+        var triangleNumber = 3
+        while true {
+            let factors = calculateFactorsOf(x: triangleNumber, referenceDict: factorMap)
+            if factors.count > 500 {
+                break
+            }
+            factorMap[triangleNumber] = factors
+            print("Number: \(i) \(triangleNumber) has \(factors.count) factors")
+            i += 1
+            triangleNumber += i
+        }
+        
+        return Answer.init(result: triangleNumber)
     }
 }
 
